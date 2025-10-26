@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>러니버스 - 러닝 시작하기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="run-start-container">
+        <header class="header">
+            <button class="btn btn-icon" id="backBtn">←</button>
+            <h1>러닝 시작하기</h1>
+            <button class="btn btn-icon" id="settingsBtn">⚙️</button>
+        </header>
+        
+        <main class="main-content">
+            <div class="map-section">
+                <h3>GPS 기반 실시간 러닝 코스</h3>
+                <div class="map-placeholder" id="mapArea">
+                    <div class="map-content">
+                        <span class="map-icon">🗺️</span>
+                        <p>지도가 여기에 표시됩니다</p>
+                        <small>GPS 위치를 확인하는 중...</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="run-options">
+                <h3>러닝 모드 선택</h3>
+                
+                <div class="option-cards">
+                    <div class="option-card" id="relayCard">
+                        <div class="option-icon">🏃‍♂️🏃‍♀️</div>
+                        <h4>릴레이 러닝</h4>
+                        <p>팀원들과 함께 바통을 넘기며 달려보세요</p>
+                        <button class="btn btn-primary" id="relayStartBtn">릴레이 시작</button>
+                    </div>
+                    
+                    <div class="option-card" id="ghostCard">
+                        <div class="option-icon">👻</div>
+                        <h4>AI 고스트런</h4>
+                        <p>AI와 함께 혼자서도 즐거운 러닝을 경험하세요</p>
+                        <button class="btn btn-secondary" id="ghostStartBtn">AI 고스트런</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-settings">
+                <h3>빠른 설정</h3>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label for="distance">목표 거리</label>
+                        <select id="distance">
+                            <option value="1">1km</option>
+                            <option value="3" selected>3km</option>
+                            <option value="5">5km</option>
+                            <option value="10">10km</option>
+                        </select>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label for="pace">목표 페이스</label>
+                        <select id="pace">
+                            <option value="slow">느린 페이스</option>
+                            <option value="medium" selected>보통 페이스</option>
+                            <option value="fast">빠른 페이스</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-routes">
+                <h3>최근 러닝 코스</h3>
+                <div class="route-list">
+                    <div class="route-item">
+                        <span class="route-icon">🏃‍♂️</span>
+                        <div class="route-info">
+                            <p>한강공원 코스</p>
+                            <small>3.2km • 평균 페이스 5'30"</small>
+                        </div>
+                        <button class="btn btn-small">선택</button>
+                    </div>
+                    <div class="route-item">
+                        <span class="route-icon">🌳</span>
+                        <div class="route-info">
+                            <p>올림픽공원 코스</p>
+                            <small>2.8km • 평균 페이스 6'00"</small>
+                        </div>
+                        <button class="btn btn-small">선택</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
