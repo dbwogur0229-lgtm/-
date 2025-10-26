@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>러니버스 - 기록</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="run-history-container">
+        <header class="header">
+            <button class="btn btn-icon" id="backBtn">←</button>
+            <h1>러닝 기록</h1>
+            <button class="btn btn-icon" id="exportBtn">📤</button>
+        </header>
+        
+        <main class="main-content">
+            <div class="history-stats">
+                <div class="stat-card">
+                    <h3>총 러닝 거리</h3>
+                    <p class="stat-number">42.5km</p>
+                </div>
+                <div class="stat-card">
+                    <h3>총 러닝 시간</h3>
+                    <p class="stat-number">4시간 32분</p>
+                </div>
+                <div class="stat-card">
+                    <h3>평균 페이스</h3>
+                    <p class="stat-number">6'24"/km</p>
+                </div>
+                <div class="stat-card">
+                    <h3>총 러닝 횟수</h3>
+                    <p class="stat-number">15회</p>
+                </div>
+            </div>
+            
+            <div class="history-filters">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="week">이번 주</button>
+                <button class="filter-btn" data-filter="month">이번 달</button>
+                <button class="filter-btn" data-filter="year">올해</button>
+            </div>
+            
+            <div class="history-list">
+                <div class="history-item">
+                    <div class="history-date">
+                        <span class="date">2024.01.15</span>
+                        <span class="day">월요일</span>
+                    </div>
+                    <div class="history-info">
+                        <div class="run-type">🏃‍♂️ 개인 러닝</div>
+                        <div class="run-details">
+                            <span class="distance">3.2km</span>
+                            <span class="time">18분 24초</span>
+                            <span class="pace">5'45"/km</span>
+                        </div>
+                        <div class="run-route">한강공원 코스</div>
+                    </div>
+                    <div class="history-actions">
+                        <button class="btn btn-small" onclick="viewDetails(1)">상세보기</button>
+                    </div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="history-date">
+                        <span class="date">2024.01.14</span>
+                        <span class="day">일요일</span>
+                    </div>
+                    <div class="history-info">
+                        <div class="run-type">👥 팀 릴레이</div>
+                        <div class="run-details">
+                            <span class="distance">5.0km</span>
+                            <span class="time">28분 15초</span>
+                            <span class="pace">5'39"/km</span>
+                        </div>
+                        <div class="run-route">올림픽공원 코스</div>
+                    </div>
+                    <div class="history-actions">
+                        <button class="btn btn-small" onclick="viewDetails(2)">상세보기</button>
+                    </div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="history-date">
+                        <span class="date">2024.01.12</span>
+                        <span class="day">금요일</span>
+                    </div>
+                    <div class="history-info">
+                        <div class="run-type">👻 AI 고스트런</div>
+                        <div class="run-details">
+                            <span class="distance">2.8km</span>
+                            <span class="time">16분 48초</span>
+                            <span class="pace">6'00"/km</span>
+                        </div>
+                        <div class="run-route">근처 공원 코스</div>
+                    </div>
+                    <div class="history-actions">
+                        <button class="btn btn-small" onclick="viewDetails(3)">상세보기</button>
+                    </div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="history-date">
+                        <span class="date">2024.01.10</span>
+                        <span class="day">수요일</span>
+                    </div>
+                    <div class="history-info">
+                        <div class="run-type">🏃‍♂️ 개인 러닝</div>
+                        <div class="run-details">
+                            <span class="distance">4.1km</span>
+                            <span class="time">24분 36초</span>
+                            <span class="pace">6'00"/km</span>
+                        </div>
+                        <div class="run-route">한강공원 코스</div>
+                    </div>
+                    <div class="history-actions">
+                        <button class="btn btn-small" onclick="viewDetails(4)">상세보기</button>
+                    </div>
+                </div>
+                
+                <div class="history-item">
+                    <div class="history-date">
+                        <span class="date">2024.01.08</span>
+                        <span class="day">월요일</span>
+                    </div>
+                    <div class="history-info">
+                        <div class="run-type">👥 팀 릴레이</div>
+                        <div class="run-details">
+                            <span class="distance">3.5km</span>
+                            <span class="time">20분 15초</span>
+                            <span class="pace">5'47"/km</span>
+                        </div>
+                        <div class="run-route">올림픽공원 코스</div>
+                    </div>
+                    <div class="history-actions">
+                        <button class="btn btn-small" onclick="viewDetails(5)">상세보기</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="history-actions-section">
+                <button class="btn btn-secondary" id="exportJsonBtn">JSON 내보내기</button>
+                <button class="btn btn-danger" id="deleteAllBtn">전체 삭제</button>
+            </div>
+        </main>
+        
+        <div class="achievement-section">
+            <h3>최근 달성한 업적</h3>
+            <div class="achievement-list">
+                <div class="achievement-item">
+                    <span class="achievement-icon">🏆</span>
+                    <div class="achievement-info">
+                        <p>첫 5km 달성!</p>
+                        <small>2024.01.14</small>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-icon">🔥</span>
+                    <div class="achievement-info">
+                        <p>연속 3일 러닝</p>
+                        <small>2024.01.15</small>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-icon">⚡</span>
+                    <div class="achievement-info">
+                        <p>빠른 페이스 달성</p>
+                        <small>2024.01.15</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

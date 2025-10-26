@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>러니버스 - 아바타 꾸미기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="avatar-container">
+        <header class="header">
+            <button class="btn btn-icon" id="backBtn">←</button>
+            <h1>아바타 꾸미기</h1>
+            <button class="btn btn-icon" id="saveBtn">💾</button>
+        </header>
+        
+        <main class="main-content">
+            <div class="avatar-preview-section">
+                <h3>미리보기</h3>
+                <div class="avatar-preview-large" id="avatarPreview">
+                    <div class="avatar-model">
+                        <span class="avatar-emoji" id="previewEmoji">🏃‍♂️</span>
+                        <div class="avatar-background" id="previewBackground"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="customization-options">
+                <div class="option-section">
+                    <h3>이모지 프로필</h3>
+                    <div class="emoji-grid">
+                        <button class="emoji-option active" data-emoji="🏃‍♂️">🏃‍♂️</button>
+                        <button class="emoji-option" data-emoji="🏃‍♀️">🏃‍♀️</button>
+                        <button class="emoji-option" data-emoji="🚶‍♂️">🚶‍♂️</button>
+                        <button class="emoji-option" data-emoji="🚶‍♀️">🚶‍♀️</button>
+                        <button class="emoji-option" data-emoji="🏃‍♂️‍➡️">🏃‍♂️‍➡️</button>
+                        <button class="emoji-option" data-emoji="🏃‍♀️‍➡️">🏃‍♀️‍➡️</button>
+                        <button class="emoji-option" data-emoji="💪">💪</button>
+                        <button class="emoji-option" data-emoji="🔥">🔥</button>
+                        <button class="emoji-option" data-emoji="⭐">⭐</button>
+                        <button class="emoji-option" data-emoji="🏆">🏆</button>
+                        <button class="emoji-option" data-emoji="🎯">🎯</button>
+                        <button class="emoji-option" data-emoji="🚀">🚀</button>
+                    </div>
+                </div>
+                
+                <div class="option-section">
+                    <h3>배경 색상</h3>
+                    <div class="color-grid">
+                        <button class="color-option active" data-color="#4CAF50" style="background-color: #4CAF50;"></button>
+                        <button class="color-option" data-color="#FF9800" style="background-color: #FF9800;"></button>
+                        <button class="color-option" data-color="#2196F3" style="background-color: #2196F3;"></button>
+                        <button class="color-option" data-color="#9C27B0" style="background-color: #9C27B0;"></button>
+                        <button class="color-option" data-color="#F44336" style="background-color: #F44336;"></button>
+                        <button class="color-option" data-color="#00BCD4" style="background-color: #00BCD4;"></button>
+                        <button class="color-option" data-color="#FFC107" style="background-color: #FFC107;"></button>
+                        <button class="color-option" data-color="#795548" style="background-color: #795548;"></button>
+                    </div>
+                </div>
+                
+                <div class="option-section">
+                    <h3>테마 스타일</h3>
+                    <div class="theme-options">
+                        <button class="theme-option active" data-theme="modern">
+                            <div class="theme-preview modern-theme"></div>
+                            <span>모던</span>
+                        </button>
+                        <button class="theme-option" data-theme="vintage">
+                            <div class="theme-preview vintage-theme"></div>
+                            <span>빈티지</span>
+                        </button>
+                        <button class="theme-option" data-theme="neon">
+                            <div class="theme-preview neon-theme"></div>
+                            <span>네온</span>
+                        </button>
+                        <button class="theme-option" data-theme="nature">
+                            <div class="theme-preview nature-theme"></div>
+                            <span>자연</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-secondary" id="resetBtn">기본값</button>
+                <button class="btn btn-primary" id="saveAvatarBtn">저장</button>
+            </div>
+        </main>
+        
+        <div class="avatar-stats">
+            <h3>내 아바타 정보</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">레벨</span>
+                    <span class="stat-value">Lv.5</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">총 러닝 거리</span>
+                    <span class="stat-value">42.5km</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">달성한 목표</span>
+                    <span class="stat-value">12개</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">획득한 배지</span>
+                    <span class="stat-value">8개</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

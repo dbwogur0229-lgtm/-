@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>러니버스 - 실시간 러닝</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="room-detail-container">
+        <header class="header">
+            <button class="btn btn-icon" id="backBtn">←</button>
+            <h1>실시간 러닝</h1>
+            <button class="btn btn-icon" id="menuBtn">⋯</button>
+        </header>
+        
+        <main class="main-content">
+            <div class="run-info-section">
+                <div class="run-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="timeDisplay">00:00:00</span>
+                            <span class="stat-label">시간</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">📏</div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="distanceDisplay">0.00</span>
+                            <span class="stat-label">거리 (km)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">🏃‍♂️</div>
+                        <div class="stat-content">
+                            <span class="stat-value" id="paceDisplay">--:--</span>
+                            <span class="stat-label">페이스</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="run-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressText">목표까지 3.0km 남음</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="run-controls">
+                <div class="control-buttons">
+                    <button class="btn btn-large btn-primary" id="startBtn">시작</button>
+                    <button class="btn btn-large btn-secondary" id="pauseBtn" disabled>일시정지</button>
+                    <button class="btn btn-large btn-accent" id="batonBtn" disabled>바통 넘기기</button>
+                    <button class="btn btn-large btn-danger" id="resetBtn" disabled>종료</button>
+                </div>
+            </div>
+            
+            <div class="team-info">
+                <h3>팀 정보</h3>
+                <div class="team-details">
+                    <div class="team-name">달려라 러너즈</div>
+                    <div class="team-members">
+                        <span class="member active">🏃‍♂️ 나</span>
+                        <span class="member">🏃‍♀️ 김러너</span>
+                        <span class="member">🏃‍♂️ 박스프린터</span>
+                        <span class="member">🏃‍♀️ 이마라톤</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="leaderboard-section">
+                <h3>리더보드</h3>
+                <div class="leaderboard">
+                    <div class="leaderboard-item rank-1">
+                        <span class="rank">1</span>
+                        <span class="avatar">🏃‍♂️</span>
+                        <span class="name">나</span>
+                        <span class="distance">2.5km</span>
+                    </div>
+                    <div class="leaderboard-item rank-2">
+                        <span class="rank">2</span>
+                        <span class="avatar">🏃‍♀️</span>
+                        <span class="name">김러너</span>
+                        <span class="distance">2.1km</span>
+                    </div>
+                    <div class="leaderboard-item rank-3">
+                        <span class="rank">3</span>
+                        <span class="avatar">🏃‍♂️</span>
+                        <span class="name">박스프린터</span>
+                        <span class="distance">1.8km</span>
+                    </div>
+                    <div class="leaderboard-item">
+                        <span class="rank">4</span>
+                        <span class="avatar">🏃‍♀️</span>
+                        <span class="name">이마라톤</span>
+                        <span class="distance">1.2km</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="run-map">
+                <h3>실시간 경로</h3>
+                <div class="map-placeholder" id="runMap">
+                    <div class="map-content">
+                        <span class="map-icon">🗺️</span>
+                        <p>실시간 러닝 경로</p>
+                        <small>GPS 추적 중...</small>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="floating-actions">
+            <button class="btn btn-floating" id="voiceBtn">🎤</button>
+            <button class="btn btn-floating" id="musicBtn">🎵</button>
+            <button class="btn btn-floating" id="cameraBtn">📷</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

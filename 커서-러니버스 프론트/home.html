@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>러니버스 - 홈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home-container">
+        <header class="header">
+            <div class="user-info">
+                <div class="avatar-preview">
+                    <span class="avatar-emoji">🏃‍♂️</span>
+                </div>
+                <div class="user-details">
+                    <h2>안녕하세요!</h2>
+                    <p>오늘도 함께 달려볼까요?</p>
+                </div>
+            </div>
+            <button class="btn btn-icon" id="profileBtn">⚙️</button>
+        </header>
+        
+        <main class="main-content">
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <h3>오늘의 거리</h3>
+                    <p class="stat-number">0km</p>
+                </div>
+                <div class="stat-card">
+                    <h3>이번 주 목표</h3>
+                    <p class="stat-number">15km</p>
+                </div>
+                <div class="stat-card">
+                    <h3>연속 달성</h3>
+                    <p class="stat-number">3일</p>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-large btn-primary" id="startRunningBtn">
+                    <span class="btn-icon">🏃‍♂️</span>
+                    러닝 시작하기
+                </button>
+                
+                <button class="btn btn-large btn-secondary" id="createTeamBtn">
+                    <span class="btn-icon">👥</span>
+                    팀 만들기
+                </button>
+                
+                <button class="btn btn-large btn-accent" id="customizeAvatarBtn">
+                    <span class="btn-icon">🎨</span>
+                    내 아바타 꾸미기
+                </button>
+                
+                <button class="btn btn-large btn-outline" id="communityBtn">
+                    <span class="btn-icon">🌍</span>
+                    커뮤니티 이동
+                </button>
+            </div>
+            
+            <div class="recent-activity">
+                <h3>최근 활동</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-icon">🏃‍♂️</span>
+                        <div class="activity-info">
+                            <p>오늘 아침 러닝</p>
+                            <small>2.5km • 15분</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">👥</span>
+                        <div class="activity-info">
+                            <p>팀 "달려라 러너즈" 참여</p>
+                            <small>어제</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <nav class="bottom-nav">
+            <button class="nav-item active" id="homeNav">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">홈</span>
+            </button>
+            <button class="nav-item" id="runNav">
+                <span class="nav-icon">🏃‍♂️</span>
+                <span class="nav-label">러닝</span>
+            </button>
+            <button class="nav-item" id="teamNav">
+                <span class="nav-icon">👥</span>
+                <span class="nav-label">팀</span>
+            </button>
+            <button class="nav-item" id="profileNav">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">프로필</span>
+            </button>
+        </nav>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
